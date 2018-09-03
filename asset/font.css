@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Nanumfont;
+
+    src: local("./asset/Design/design_asset/NanumSquareRoundB.ttf");
+    font-weight: 700;
+    unicode-range: U+AC01, U+AC08;
+    font-style: normal;
+
+}

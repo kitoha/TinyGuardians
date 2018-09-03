@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TinyGuardians</title>
+<link href="https://fonts.googleapis.com/css?family=Dosis:700,800" rel="stylesheet">
+</head>
+
+<h1 id="kth"></h1>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script type="text/javascript" src="./phaser.min.js"></script>
+<script type="text/javascript" src="playView.js"></script>
+<script type="text/javascript" src="startView.js"></script>
+<script type="text/javascript" src="selectCharacterView.js"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA98wTGvzWEv5TdPltih4mz-9gqoKcLB0o",
+    authDomain: "webgame-9f06c.firebaseapp.com",
+    databaseURL: "https://webgame-9f06c.firebaseio.com",
+    projectId: "webgame-9f06c",
+    storageBucket: "webgame-9f06c.appspot.com",
+    messagingSenderId: "870214262882"
+  };
+  firebase.initializeApp(config);
+  
+  var db=firebase.database().ref();
+
+</script>
+</body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript">
+ 
+ 	(function goGame(){
+ 		var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, null);
+    var kakaoIsTrue=false;
+ 		game.state.add('selectCharacter',selectCharacterState);
+ 		game.state.add('start',startState);
+    //game.state.add('leaderboard',leaderBoardState);
+ 		game.state.add('main',mainState);
+		game.state.start('start');
+
+ 	})();
+
+  
+
+ </script>
+
+</html>
