@@ -352,7 +352,7 @@ startState.prototype={
 
 	loginWithKakao:function() {
 		this.kakaoIsTrue=true;
-		Kakao.init('fe69d80e59e71cd234e31f1e5873bf2c');
+		Kakao.init(''); // close api key
       // 로그인 창을 띄웁니다.
    
       Kakao.Auth.login({
